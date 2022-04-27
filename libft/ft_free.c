@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksadiku <ksadiku@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 16:51:38 by ksadiku           #+#    #+#             */
-/*   Updated: 2022/04/27 12:23:03 by ksadiku          ###   ########.fr       */
+/*   Created: 2022/03/22 11:54:56 by ksadiku           #+#    #+#             */
+/*   Updated: 2022/03/22 11:55:20 by ksadiku          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include "libft/includes/libft.h"
-
-# define BUFF_SIZE 32
-# define FD_SIZE 4096
-
-int		get_next_line(const int fd, char **line);
-
-#endif
+void	ft_free(void *arr, size_t len)
+{
+	if (!arr)
+		return ;
+	ft_bzero(arr, len);
+	free(arr);
+}

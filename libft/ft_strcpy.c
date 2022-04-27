@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksadiku <ksadiku@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ksadiku <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 16:51:38 by ksadiku           #+#    #+#             */
-/*   Updated: 2022/04/27 12:23:03 by ksadiku          ###   ########.fr       */
+/*   Created: 2021/11/04 16:16:51 by ksadiku           #+#    #+#             */
+/*   Updated: 2021/11/22 16:30:24 by ksadiku          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include "libft/includes/libft.h"
+char	*ft_strcpy(char *dst, const char *src)
+{
+	int	i;
 
-# define BUFF_SIZE 32
-# define FD_SIZE 4096
-
-int		get_next_line(const int fd, char **line);
-
-#endif
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
+}

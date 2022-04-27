@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksadiku <ksadiku@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ksadiku <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 16:51:38 by ksadiku           #+#    #+#             */
-/*   Updated: 2022/04/27 12:23:03 by ksadiku          ###   ########.fr       */
+/*   Created: 2021/11/01 16:18:01 by ksadiku           #+#    #+#             */
+/*   Updated: 2021/11/10 18:10:43 by ksadiku          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include "libft/includes/libft.h"
-
-# define BUFF_SIZE 32
-# define FD_SIZE 4096
-
-int		get_next_line(const int fd, char **line);
-
-#endif
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
+}

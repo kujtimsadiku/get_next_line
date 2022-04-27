@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksadiku <ksadiku@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ksadiku <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 16:51:38 by ksadiku           #+#    #+#             */
-/*   Updated: 2022/04/27 12:23:03 by ksadiku          ###   ########.fr       */
+/*   Created: 2021/11/05 15:03:12 by ksadiku           #+#    #+#             */
+/*   Updated: 2021/11/10 17:59:07 by ksadiku          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include "libft/includes/libft.h"
+char	*ft_strcat(char *s1, const char *s2)
+{
+	unsigned int	i;
+	unsigned int	j;
 
-# define BUFF_SIZE 32
-# define FD_SIZE 4096
-
-int		get_next_line(const int fd, char **line);
-
-#endif
+	i = 0;
+	while (s1[i])
+		i++;
+	j = 0;
+	while (s2[j])
+	{
+		s1[i] = s2[j];
+		j++;
+		i++;
+	}
+	s1[i] = '\0';
+	return (s1);
+}
